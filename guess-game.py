@@ -2,12 +2,15 @@ import random
 
 print('猜數字遊戲')
 x = random.randint(1, 50)
-# print(x)
-
+print(x)
+low = 1
+high = 50
 for i in range(5):
     bingo = False
     while True:
         try:
+            print('------------------------------------------')
+            print(f'{low}~{high}之間')
             y = int(input(f'第{i+1}/{5}次，請猜一個數字(1~50):'))
             if x == y:
                 print('猜對了!')
@@ -16,8 +19,12 @@ for i in range(5):
             else:
                 if x > y:
                     print('猜高一點~')
+                    if y > low:
+                        low = y+1
                 else:
                     print('猜低一點~')
+                    if y < high:
+                        high = y-1
 
             break
         except Exception as e:
