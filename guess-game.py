@@ -1,7 +1,7 @@
 import random
 
 x = random.randint(1, 50)
-#print(x)
+print(x)
 
 for i in range(5):
     bingo = False
