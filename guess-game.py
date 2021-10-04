@@ -13,7 +13,7 @@ for i in range(5):
                 bingo = True
                 break
             else:
-                print('猜錯了@@~')
+                print('猜錯了~')
 
             break
         except Exception as e:
