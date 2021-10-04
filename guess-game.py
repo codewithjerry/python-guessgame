@@ -1,7 +1,8 @@
 import random
 
+print('猜數字遊戲')
 x = random.randint(1, 50)
-print(x)
+# print(x)
 
 for i in range(5):
     bingo = False
@@ -13,7 +14,10 @@ for i in range(5):
                 bingo = True
                 break
             else:
-                print('猜錯了~')
+                if x > y:
+                    print('猜高一點~')
+                else:
+                    print('猜低一點~')
 
             break
         except Exception as e:
@@ -22,4 +26,5 @@ for i in range(5):
     if bingo:
         break
 
-print(f'正確答案為:{x}')
+if not bingo:
+    print(f'5次結束，正確答案為:{x}')
